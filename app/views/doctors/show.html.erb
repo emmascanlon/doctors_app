@@ -1,6 +1,9 @@
 <h1>Dr. <%=@doctor.full_name %></h1>
 
-<p> I don't have anything to tell you about this doctor! </p>
+<%= link_to "Schedule Appointment", new_doctor_appointment_path(@doctor), class: "ui yellow button" %>
+<%= link_to "View Appointments", doctor_appointments_path(@doctor), class: "ui green button" %>
+<br>
+<br>
 
 <%= link_to "Edit", edit_doctor_path(@doctor), class: "ui violet button inverted" %>
 <%= link_to "Back", doctors_path, class: "ui blue button inverted" %>

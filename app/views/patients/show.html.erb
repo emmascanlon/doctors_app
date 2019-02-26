@@ -1,6 +1,6 @@
 <h1><%= @patient.full_name %> </h1>
 
-<p> I have nothing to tell you about this patient! <p>
+<%= link_to "View Appointments", patient_appointment_path(@patient)%>
 
 <%= link_to "Edit", edit_patient_path(@patient), class: "ui violet button inverted" %>
 <%= link_to "Back", patients_path, class: "ui blue button inverted" %>

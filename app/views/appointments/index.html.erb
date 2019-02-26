@@ -1,0 +1,7 @@
+<h1>Appointments with Dr. <%=@doctor.full_name%></h1>
+<% @doctor.appointments.each do |appointment| %>
+  Date: <%= appointment.date %> <br>
+  Time: <%= appointment.time %> <br>
+  Patient: <%= appointment.patient.full_name %> <br>
+  <br>
+  <% end %>
