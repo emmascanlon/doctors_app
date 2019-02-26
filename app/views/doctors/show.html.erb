@@ -1,2 +1,6 @@
-<h1>Doctors#show</h1>
-<p>Find me in app/views/doctors/show.html.erb</p>
+<h1>Dr. <%=@doctor.full_name %></h1>
+
+<p> I don't have anything to tell you about this doctor! </p>
+
+<%= link_to "Edit", edit_doctor_path(@doctor), class: "ui violet button inverted" %>
+<%= link_to "Back", doctors_path, class: "ui blue button inverted" %>

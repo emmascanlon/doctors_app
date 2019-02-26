@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_course, only: [:show, :destroy, :edit, :update]
+  before_action :set_patient, only: [:show, :destroy, :edit, :update]
   def index
     @patients = Patient.all
   end
@@ -42,6 +42,6 @@ class PatientsController < ApplicationController
 end
 
 def patient_params
-  params.require(:course).permit.(:name)
+  params.require(:patient).permit(:first_name, :last_name)
 end
 end
