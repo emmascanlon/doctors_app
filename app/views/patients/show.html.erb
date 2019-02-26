@@ -1,7 +1,11 @@
 <h1><%= @patient.full_name %> </h1>
-<h3>Appointments</h3> <br>
-
-
+<h3>Appointments</h3> 
+<% Appointment.where(patient_id:@patient).each do |appointment| %>
+  <h5>Appointment with: Dr. <%=appointment.doctor.full_name %><br>
+  <%=appointment.date %><br>
+  <%=appointment.time %></h5><br>
+  <% end %> 
+<hr>
 <%= link_to "Edit", edit_patient_path(@patient), class: "ui violet button inverted" %>
 <%= link_to "Back", patients_path, class: "ui blue button inverted" %>
 <%= link_to "Delete Patient", @patient, method: :delete, class: "ui red button" %>
