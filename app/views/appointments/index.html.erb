@@ -2,6 +2,7 @@
 <% @doctor.appointments.each do |appointment| %>
   Date: <%= appointment.date %> <br>
   Time: <%= appointment.time %> <br>
-  Patient: <%= appointment.patient.full_name %> <br>
+  Patient: <%= appointment.patient.full_name %> <br> <br>
+  <%= link_to "Delete Appointment", doctor_appointment_path(@doctor, appointment), method: :delete, class: "ui red button" %>
   <br>
   <% end %>

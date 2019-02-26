@@ -20,7 +20,7 @@ class AppointmentsController < ApplicationController
   end
 
     def destroy
-      @appointment = @doctor.appointment.find(params[:id])
+      @appointment = Appointment.find(params[:id])
       @appointment.destroy
       redirect_to doctor_appointments_path(@doctor)
     end
@@ -31,7 +31,7 @@ class AppointmentsController < ApplicationController
     end
 
     def appointment_params
-      params.require(:appointment).permit(:role, :patient_id)
+      params.require(:appointment).permit(:date, :time, :patient_id)
     end
 end
 
