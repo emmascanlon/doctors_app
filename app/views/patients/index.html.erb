@@ -1,5 +1,11 @@
 <h1>Patients</h1>
 
 <% @patients.each do |patient| %>
-  <%= link_to patient.full_name, patient_path(patient) %> <br>
+  <div class = "ui large celled list">
+  <div class="item">
+    <%= link_to patient.full_name, patient_path(patient) %>
+    </div>
+    </div>
   <% end %>
+
+  
